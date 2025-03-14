@@ -7,11 +7,11 @@ Route::get('/', function () {
     return view('/welcome');
 })->name('home');
 
-Route::view('dashboard', 'dashboard')
+Route::view('dashboard', 'monitor.dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
-Route::view('file', 'file')
+Route::view('file', 'monitor.file')
     ->middleware(['auth', 'verified'])
     ->name('file');
 
