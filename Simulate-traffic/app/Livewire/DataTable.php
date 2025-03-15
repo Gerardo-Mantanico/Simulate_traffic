@@ -11,26 +11,34 @@ class DataTable extends Component
     public $search = '';              // Filtro de búsqueda
     public $actionButtons = [];       // Botones de acción para cada fila
     public $filterColumn = '';        // Columna por la que filtrar
+    public $nameTable = 'Table usuario'; 
 
     // Método para pasar las columnas, los datos y los botones de acción
-    public function mount($columns = [], $data = [], $actionButtons = [])
+    public function mount($columns = [], $data = [], $actionButtons = [],$nameTable)
     {
         $this->columns = $columns;
         $this->data = $data;
         $this->actionButtons = $actionButtons;
+        $this->nameTablero = $nameTable;
+
     }
 
-    // Método para eliminar un ítem
-    public function deleteItem($id)
+    public function deleteUser($id)
     {
-        // Eliminar el ítem de los datos
-        $this->data = collect($this->data)->reject(function ($item) use ($id) {
-            return $item['id'] == $id;
-        });
+        // Encuentra al usuario y elimínalo
+        $user = User::find($id);
+        
+        if ($user) {
+            $user->delete();
+            session()->flash('message', 'Usuario eliminado correctamente.');
+        } else {
+            session()->flash('message', 'Usuario no encontrado.');
+        }
 
-        session()->flash('message', 'Elemento eliminado correctamente.');
+        // Recargar los datos después de la eliminación
+        $this->data = User::all();
     }
-
+    
     // Método render que solo filtra los datos, sin paginación
     public function render()
     {

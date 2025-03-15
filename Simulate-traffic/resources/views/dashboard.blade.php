@@ -1,12 +1,11 @@
 <x-layouts.app title="Dashboard">
 
+@livewire('user-table')
+
     <div class=" flex h-full w-full flex-1 flex-col gap-8 rounded-xl">
-    <div class=" relative aspect-video overflow-hidden bg-black rounded-xl border text-black">
-                   <ul>
-                    <li>RUN</li> border-neutral-100 dark:border-neutral-700
-                    <li>Carga de archivos </li>
-                </ul>
-                @livewire('user-table')
+    <div class=" relative aspect-video overflow-hidden  dark:bg-zinc-50 rounded-xl  text-black">
+                 
+               
     </div>   
     <div class="grid auto-rows-min gap-4 md:grid-cols-3">
     <div class=" bg-gray-100 relative aspect-video overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700">
