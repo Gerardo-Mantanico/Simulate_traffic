@@ -1,30 +1,51 @@
-<div>
-    <table class="min-w-full bg-white border border-gray-300 shadow-lg rounded-lg">
-        <thead class="bg-gray-200">
-            <tr>
-                @foreach($columns as $column)
-                    <th class="px-4 py-2 text-left font-bold">{{ $column }}</th>
+<div class="container mt-4 bg-amber-400">
+    <!-- Mensaje de éxito -->
+    @if (session()->has('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
+        </div>
+    @endif
+
+    <!-- Campo de búsqueda -->
+    <div class="row mb-3">
+        <div class="col-md-4">
+            <input type="text" wire:model="search" class="form-control dracula-input" placeholder="Buscar...">
+        </div>
+
+        <!-- Campo para seleccionar la columna de filtrado -->
+        <div class="col-md-4">
+            <select wire:model="filterColumn" class="form-control dracula-select">
+                <option value="">Seleccionar columna</option>
+                @foreach ($columns as $column)
+                    <option value="{{ $column }}">{{ ucfirst($column) }}</option>
                 @endforeach
-                @if($actionButtons)
-                    <th class="px-4 py-2 text-left font-bold">Acciones</th>
-                @endif
+            </select>
+        </div>
+    </div>
+
+    <!-- Tabla con estilo Dracula -->
+    <table class="table dracula-table">
+        <thead>
+            <tr>
+                @foreach ($columns as $column)
+                    <th class="text-white">{{ ucfirst($column) }}</th>
+                @endforeach
+                <th class="text-white">Acciones</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($data as $row)
-                <tr class="border-b hover:bg-gray-100">
-                    @foreach($columns as $column)
-                        <td class="px-4 py-2">{{ $row[$column] ?? '' }}</td>
+            @foreach ($data as $item)
+                <tr>
+                    @foreach ($columns as $column)
+                        <td class="text-white">{{ $item[$column] }}</td>
                     @endforeach
-                    @if($actionButtons)
-                        <td class="px-4 py-2">
-                            @foreach ($actionButtons as $action)
-                                <button wire:click="{{ $action['action'] }}({{ $row['id'] }})" class="text-red-500 hover:text-red-700">
-                                    {{ $action['label'] }}
-                                </button>
-                            @endforeach
-                        </td>
-                    @endif
+                    <td>
+                        @foreach ($actionButtons as $action)
+                            <button wire:click="{{ $action['action'] }}({{ $item['id'] }})" class="btn dracula-btn">
+                                {{ $action['label'] }}
+                            </button>
+                        @endforeach
+                    </td>
                 </tr>
             @endforeach
         </tbody>

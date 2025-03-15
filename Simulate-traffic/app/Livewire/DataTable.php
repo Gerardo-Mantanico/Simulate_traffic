@@ -6,25 +6,44 @@ use Livewire\Component;
 
 class DataTable extends Component
 {
-    public $columns = []; // Columnas de la tabla
-    public $data = [];    // Datos de la tabla
-    public $actionButtons = []; // Acciones (como eliminar)
-    public $search = ''; // Campo de búsqueda
-    public $perPage = 10; // Número de registros por página
+    public $columns = [];             // Columnas de la tabla
+    public $data = [];                // Los datos de la tabla
+    public $search = '';              // Filtro de búsqueda
+    public $actionButtons = [];       // Botones de acción para cada fila
+    public $filterColumn = '';        // Columna por la que filtrar
 
+    // Método para pasar las columnas, los datos y los botones de acción
+    public function mount($columns = [], $data = [], $actionButtons = [])
+    {
+        $this->columns = $columns;
+        $this->data = $data;
+        $this->actionButtons = $actionButtons;
+    }
 
-    
+    // Método para eliminar un ítem
+    public function deleteItem($id)
+    {
+        // Eliminar el ítem de los datos
+        $this->data = collect($this->data)->reject(function ($item) use ($id) {
+            return $item['id'] == $id;
+        });
+
+        session()->flash('message', 'Elemento eliminado correctamente.');
+    }
+
+    // Método render que solo filtra los datos, sin paginación
     public function render()
     {
-        $query = $this->model::query();
-        // Agregar búsqueda (por cada columna que queramos filtrar)
+        $filteredData = collect($this->data);
+
+        // Filtrar los datos si se aplica búsqueda
         if ($this->search) {
-            foreach ($this->columns as $column) {
-                $query->orWhere($column, 'like', '%' . $this->search . '%');
-            }
+            $filteredData = $filteredData->filter(function ($item) {
+                return str_contains(strtolower($item[$this->filterColumn]), strtolower($this->search));
+            });
         }
-        // Paginación
-        $data = $query->paginate($this->perPage);
-        return view('livewire.table', compact('data'));
+
+        // Retornar la vista con los datos filtrados
+        return view('livewire.data-table', ['data' => $filteredData]);
     }
 }
