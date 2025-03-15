@@ -11,7 +11,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        //middleware para el control de roles
+      //$middleware->append(App\Http\Middleware\RedirecBasedOnRole::class);
+
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

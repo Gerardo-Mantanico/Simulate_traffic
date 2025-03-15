@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="dark">
     <head>
-        @include('partials.head')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+     @include('partials.head')
     </head>
     <body class="min-h-screen bg-white dark:bg-zinc-50">
         <flux:sidebar sticky stashable class="dark:bg-zinc-100">
@@ -14,29 +15,28 @@
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('config')" class="grid ">
                     <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
-                    <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Carga de archivo') }}</flux:navlist.item>
+                    <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Gestion usuarios') }}</flux:navlist.item>
+                    <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Calles') }}</flux:navlist.item>
+                    <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Semaforo') }}</flux:navlist.item>
+                    <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Reportes') }}</flux:navlist.item>
+                    <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Graficos') }}</flux:navlist.item>
     
-                    <flux:navlist.item icon="cloud-upload" href="https://github.com/laravel/livewire-starter-kit" target="_blank">
-                         {{ __('carga de archivo') }}
-                     </flux:navlist.item>
-
-                <flux:navlist.item icon="file" href="https://laravel.com/docs/starter-kits" target="_blank">
-                {{ __('Generar datos') }}
-                </flux:navlist.item>
+                    <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Carga de trafico') }}</flux:navlist.item>
+                    <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Archivos') }}</flux:navlist.item>
+                    <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Reportes de iteraciones') }}</flux:navlist.item>
+                    <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Informacion especial') }}</flux:navlist.item>
+    
+                    <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Reportes e informes') }}</flux:navlist.item>
+                    <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Agregar Calles y avenidas') }}</flux:navlist.item>
+                    <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Historico') }}</flux:navlist.item>
+                    <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Reporte de usuarios') }}</flux:navlist.item>
+    
         
                 </flux:navlist.group>
             </flux:navlist>
 
             <flux:spacer />
 
-            
-            <flux:navlist variant="outline">
-                <flux:navlist.item icon="cloud-upload" href="https://github.com/laravel/livewire-starter-kit" target="_blank">
-                {{ __('carga de archivo') }}
-                </flux:navlist.item>
-
-       
-            </flux:navlist>
 
             <!-- Desktop User Menu -->
             <flux:dropdown position="bottom" align="start">

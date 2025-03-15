@@ -1,0 +1,11 @@
+{
+    "name": "Monitoreo",
+    "alias": "monitoreo",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Monitoreo\\Providers\\MonitoreoServiceProvider"
+    ],
+    "files": []
+}
