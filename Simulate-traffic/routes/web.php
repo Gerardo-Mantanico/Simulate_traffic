@@ -7,7 +7,15 @@ use App\Http\Controllers\MonitorController;
 use Livewire\Volt\Volt;
 
 
+Route::get('/semaforo', App\Livewire\SemaforoTable::class)->name('semaforo');
+Route::get('/semaforo/add', App\Livewire\SemaforoForm::class);
 
+Route::get('/userRegister', App\Livewire\UserTable::class)->name('userRegister');
+//Route::get('/user/add', App\Livewire\SemaforoForm::class);
+/*
+Route::get('/semaforo', function () {
+    return view('livewire.semaforo-table');
+});*/
 
 
 Route::get('/', function () {
@@ -19,13 +27,18 @@ Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
+// Asegúrate de que esta ruta no esté dentro de algún grupo de rutas con prefijos o middleware.
+Route::get('gestionar-usuario', function () {
+    return view('livewire.user-table');
+});
+
 
   /*  Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 */
 
-    Route::prefix('admin')->group(function(){
+  /*  Route::prefix('admin')->group(function(){
         require base_path('Modules/Administrador/routes/web.php');
     });
     Route::prefix('supervisor')->group(function(){
@@ -34,7 +47,7 @@ Route::view('dashboard', 'dashboard')
     Route::prefix('monitoreo')->group(function(){
         require base_path('Modules/Monitoreo/routes/web.php');
     });
-
+*/
 // Ruta para la página de archivo
 Route::view('file', 'monitor.file')
     ->middleware(['auth', 'verified'])

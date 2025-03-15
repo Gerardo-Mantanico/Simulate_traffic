@@ -29,7 +29,7 @@ class Tablero {
                         }
                     }
                 } else {
-                    fill("#282A36");
+                    fill("#44475A");
                 }
                 let c = this.coordenada(columna, fila);
                 rect(c.x, c.y, this.lado_celda);

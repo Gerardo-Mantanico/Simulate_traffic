@@ -1,7 +1,6 @@
-<div class="contenedor bg-amber-300">
-    <!-- Contenido aquí -->
-     <h1>hola amiguios</h1>
-</div>
+
+<div id="container-map"></div>
+@stack('scripts')
 
 @push('scripts')
     <!-- Cargar archivo JS solo para este componente -->

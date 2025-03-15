@@ -15,9 +15,9 @@
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('config')" class="grid ">
                     <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
-                    <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Gestion usuarios') }}</flux:navlist.item>
+                    <flux:navlist.item icon="cloud-upload" :href="route('userRegister')" :current="request()->routeIs('userRegister')" wire:navigate>{{ __('Gestion usuarios') }}</flux:navlist.item>
                     <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Calles') }}</flux:navlist.item>
-                    <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Semaforo') }}</flux:navlist.item>
+                    <flux:navlist.item icon="cloud-upload" :href="route('semaforo')" :current="request()->routeIs('semaforo')" wire:navigate>{{ __('Semaforo') }}</flux:navlist.item>
                     <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Reportes') }}</flux:navlist.item>
                     <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Graficos') }}</flux:navlist.item>
     
@@ -137,5 +137,6 @@
         {{ $slot }}
 
         @fluxScripts
+        @stack('scripts')
     </body>
 </html>

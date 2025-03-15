@@ -12,16 +12,18 @@ class DataTable extends Component
     public $actionButtons = [];       // Botones de acción para cada fila
     public $filterColumn = '';        // Columna por la que filtrar
     public $nameTable = 'Table usuario'; 
+    public $perPage = 10;              // Número de resultados por página (puedes cambiarlo según tus necesidades)
+
 
     // Método para pasar las columnas, los datos y los botones de acción
-    public function mount($columns = [], $data = [], $actionButtons = [],$nameTable)
+    public function mount($data = [], $columns = [], $actionButtons = [], $nameTable)
     {
         $this->columns = $columns;
         $this->data = $data;
         $this->actionButtons = $actionButtons;
-        $this->nameTablero = $nameTable;
-
+        $this->nameTable = $nameTable;
     }
+    
 
     public function deleteUser($id)
     {

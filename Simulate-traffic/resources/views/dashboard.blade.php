@@ -1,26 +1,31 @@
 <x-layouts.app title="Dashboard">
 
-@livewire('user-table')
-
     <div class=" flex h-full w-full flex-1 flex-col gap-8 rounded-xl">
-    <div class=" relative aspect-video overflow-hidden  dark:bg-zinc-50 rounded-xl  text-black">
-                 
-               
-    </div>   
-    <div class="grid auto-rows-min gap-4 md:grid-cols-3">
-    <div class=" bg-gray-100 relative aspect-video overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700">
-                <x-placeholder-pattern class="absolute inset-0 size-full stroke-gray-900/20 dark:stroke-neutral-100/20" />
-                <h6>configuracion</h6>
+
+    <div class="grid h-full  grid-cols-3 md:grid-cols-10 gap-4">
+    <!-- Div izquierdo (70%) -->
+    <div class="relative overflow-hidden dark:bg-zinc-50 rounded-xl text-black md:col-span-7 ">
+    <livewire:map>
+    </div>
+
+    <!-- Div derecho (30%) -->
+    <div class="relative overflow-hidden dark:bg-zinc-100 rounded-xl text-black md:col-span-3">
+    <livewire:card-semaforo>
+    </div>
+</div>
+
+
+
+    <div class="grid auto-rows-min gap-4 md:grid-cols-4">
+    <div class=" dark:bg-zinc-100 relative aspect-video overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700">                <h6>configuracion</h6>
             </div>
-            <div class=" bg-gray-100 relative aspect-video overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700">
-                <x-placeholder-pattern class="absolute inset-0 size-full stroke-gray-900/20 dark:stroke-neutral-100/20" />
-                <h6>configuracion</h6>
+            <div class=" dark:bg-zinc-100 relative aspect-video overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700">
+                      <h6>configuracion</h6>
             </div>
-            <div class=" bg-gray-100 relative aspect-video overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700">
-                <x-placeholder-pattern class="absolute inset-0 size-full stroke-gray-900/20 dark:stroke-neutral-100/20" />
-                <h6>configuracion</h6>
+            <div class=" dark:bg-zinc-100 relative aspect-video overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700">               <h6>configuracion</h6>
             </div>
-           
+            <div class=" dark:bg-zinc-100 relative aspect-video overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700">               <h6>configuracion</h6>
+            </div>
         </div>
     </div>
 </x-layouts.app>
