@@ -14,12 +14,12 @@
 
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('config')" class="grid ">
-                    <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('simulador') }}</flux:navlist.item>
-                    <flux:navlist.item icon="cloud-upload" :href="route('userRegister')" :current="request()->routeIs('userRegister')" wire:navigate>{{ __('Gestion usuarios') }}</flux:navlist.item>
+                    <flux:navlist.item  :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('simulador') }}</flux:navlist.item>
+                    <flux:navlist.item  :href="route('userRegister')" :current="request()->routeIs('userRegister')" wire:navigate>{{ __('Gestion usuarios') }}</flux:navlist.item>
                     <flux:navlist.item  :href="route('semaforo')" :current="request()->routeIs('semaforo')" wire:navigate>{{ __('Semaforo') }}</flux:navlist.item>
                     <flux:navlist.item  :href="route('resumentrafico')" :current="request()->routeIs('resumentrafico')" wire:navigate>{{ __('Resumen trafico') }}</flux:navlist.item>
 
-                    <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Calles') }}</flux:navlist.item>
+                    <flux:navlist.item  :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Calles') }}</flux:navlist.item>
                     
                     
 
