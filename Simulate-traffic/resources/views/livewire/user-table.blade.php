@@ -3,7 +3,7 @@
     <!-- Otros elementos dentro del contenedor -->
 
     <!-- Botón en la parte inferior derecha -->
-    <a href="">
+    <a href="/user/add">
     <button class="absolute mt-10 bottom-4 right-4 px-4 py-2 rounded-lg text-white bg-green-600 hover:bg-red-700 focus:ring-2 focus:ring-red-500 transition">
         Agregar Usuarios
     </button>

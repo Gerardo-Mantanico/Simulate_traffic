@@ -11,7 +11,8 @@ Route::get('/semaforo', App\Livewire\SemaforoTable::class)->name('semaforo');
 Route::get('/semaforo/add', App\Livewire\SemaforoForm::class);
 
 Route::get('/userRegister', App\Livewire\UserTable::class)->name('userRegister');
-//Route::get('/user/add', App\Livewire\SemaforoForm::class);
+Route::get('/user/add', App\Livewire\RegisterUser::class)->name('userAdd');
+
 /*
 Route::get('/semaforo', function () {
     return view('livewire.semaforo-table');

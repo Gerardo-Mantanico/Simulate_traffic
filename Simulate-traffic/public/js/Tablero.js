@@ -4,26 +4,26 @@ let autos = [];
 function setup() {
     // Crear el canvas dentro del contenedor con id 'container-map'
     let canvas = createCanvas(600, 600);
-    canvas.parent('container-map'); // Asigna el canvas al contenedor con id 'container-map'
-    canvas.style('border', 'none');  // Elimina cualquier borde si se añadió
-    canvas.style('outline', 'none'); // Elimina el contorno si es necesario
+    canvas.parent("container-map"); // Asigna el canvas al contenedor con id 'container-map'
+    canvas.style("border", "none"); // Elimina cualquier borde si se añadió
+    canvas.style("outline", "none"); // Elimina el contorno si es necesario
     tablero = new Tablero();
     frameRate(10);
 
     // Inicializa autos en una fila para simular la formación
     for (let i = 0; i < 10; i++) {
         // Todos los autos empiezan en la dirección 'derecha'
-        autos.push(new Auto(i, int((tablero.filas / 2) + 2), 'derecha')); 
-        autos.push(new Auto(59-i, int((tablero.filas / 2)-2), 'izquierda'));
-        autos.push(new Auto(int((tablero.columnas / 2)-2), i, 'abajo'));
-        autos.push(new Auto(int((tablero.columnas / 2)+2), 58-i, 'arriba'));
+        autos.push(new Auto(i, int(tablero.filas / 2 + 2), "derecha"));
+        autos.push(new Auto(59 - i, int(tablero.filas / 2 - 2), "izquierda"));
+        autos.push(new Auto(int(tablero.columnas / 2 - 2), i, "abajo"));
+        autos.push(new Auto(int(tablero.columnas / 2 + 2), 58 - i, "arriba"));
     }
 }
 
 function draw() {
-    background('#282A36');
+    background("#282A36");
     tablero.dibujar();
-    
+
     // Mover y dibujar los autos
     for (let auto of autos) {
         auto.mover();
@@ -39,7 +39,10 @@ class Tablero {
         this.lado_celda = 8;
         this.ancho = this.columnas * this.lado_celda;
         this.alto = this.filas * this.lado_celda;
-        this.posicion = createVector((width - this.ancho) / 2, (height - this.alto) / 2);
+        this.posicion = createVector(
+            (width - this.ancho) / 2,
+            (height - this.alto) / 2
+        );
     }
 
     coordenada(x, y) {
@@ -51,13 +54,26 @@ class Tablero {
         noStroke();
         for (let columna = 0; columna < this.columnas; columna++) {
             for (let fila = 0; fila < this.filas; fila++) {
-                if ((columna >= (this.columnas / 2 - this.carriles) && columna <= (this.columnas / 2 + this.carriles)) ||
-                    (fila >= (this.filas / 2 - this.carriles) && fila <= (this.filas / 2 + this.carriles))) {
+                if (
+                    (columna >= this.columnas / 2 - this.carriles &&
+                        columna <= this.columnas / 2 + this.carriles) ||
+                    (fila >= this.filas / 2 - this.carriles &&
+                        fila <= this.filas / 2 + this.carriles)
+                ) {
                     fill("black");
-                    if (columna == this.columnas / 2 || fila == this.filas / 2) {
+                    if (
+                        columna == this.columnas / 2 ||
+                        fila == this.filas / 2
+                    ) {
                         fill("yellow");
-                        if ((columna == this.columnas / 2 && (fila >= (this.filas / 2) - this.carriles && fila <= (this.filas / 2) + this.carriles)) ||
-                            (fila == this.filas / 2 && (columna >= (this.columnas / 2) - this.carriles && columna <= (this.columnas / 2) + this.carriles))) {
+                        if (
+                            (columna == this.columnas / 2 &&
+                                fila >= this.filas / 2 - this.carriles &&
+                                fila <= this.filas / 2 + this.carriles) ||
+                            (fila == this.filas / 2 &&
+                                columna >= this.columnas / 2 - this.carriles &&
+                                columna <= this.columnas / 2 + this.carriles)
+                        ) {
                             fill("black");
                         }
                     }
@@ -89,19 +105,16 @@ class Auto {
                 this.enEspera = false; // El auto comienza a moverse después de su tiempo de espera
             }
         } else {
-            if (this.direccion === 'derecha') {
+            if (this.direccion === "derecha") {
                 this.posicion.x += 1;
-                if (this.posicion.x >= (tablero.columnas / 2)) {
-                    this.direccion = 'abajo'; // Cambia de dirección cuando llega al centro
+                if (this.posicion.x >= tablero.columnas / 2) {
+                    this.direccion = "abajo"; // Cambia de dirección cuando llega al centro
                 }
-            } 
-            else if (this.direccion === 'abajo') {
+            } else if (this.direccion === "abajo") {
                 this.posicion.y += 1;
-            }
-            else if (this.direccion === 'izquierda') {
+            } else if (this.direccion === "izquierda") {
                 this.posicion.x -= 1;
-            }
-            else {
+            } else {
                 this.posicion.y -= 1;
             }
         }

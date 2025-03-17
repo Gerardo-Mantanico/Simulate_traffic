@@ -21,7 +21,6 @@
                     <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Reportes') }}</flux:navlist.item>
                     <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Graficos') }}</flux:navlist.item>
     
-                    <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Carga de trafico') }}</flux:navlist.item>
                     <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Archivos') }}</flux:navlist.item>
                     <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Reportes de iteraciones') }}</flux:navlist.item>
                     <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Informacion especial') }}</flux:navlist.item>

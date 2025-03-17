@@ -9,19 +9,21 @@
     <img src="https://i.postimg.cc/vTPctvHM/semaforo-removebg-preview.png" alt="semaforo" class="h-full object-cover">
 </div>
 
-    <x-auth-header :title="__('semaforo las rosas la vista bella ')" :description="__('Introduce los datos a continuación.')" />
 
-    <form wire:submit="submit" class="flex flex-col gap-6">
+<x-auth-header :title="__('Semaforo :nombre', ['nombre' => $semaforo->nombre])"
+               :description="__('Introduce los datos a continuación.')" />
+  
+<form wire:submit="submit" class="flex flex-col gap-6">
             <!-- Color rojo -->
             <flux:input
-                wire:model="tiempo_color_rojo"
+                wire:model="tiempo_rojo"
                 :label="__('Tiempo del color Rojo')"
                 type="number"
                 required
                 min="0"  
-                step="1" 
                 autocomplete="name"
                 :placeholder="__('Color Rojo')"
+                value="{{ $semaforo->tiempo_color_rojo }}"
             />
             <!-- Color armarillo-->
             <flux:input
@@ -33,6 +35,7 @@
                 min="0"  
                 step="1" 
                 :placeholder="__('Color Amarillo')"
+                value="{{ $semaforo->tiempo_color_amarillo }}"
             />
             <!-- Color verde-->
             <flux:input
@@ -44,6 +47,7 @@
                 min="0"  
                 step="1" 
                 :placeholder="__('Color Verde')"
+                value="{{ $semaforo->tiempo_color_verde }}"
             />
     <div class="flex items-center justify-end gap-2">
             <flux:button type="submit" variant="primary" class="w-full bg-green-600 " >

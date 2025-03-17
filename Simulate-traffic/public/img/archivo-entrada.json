@@ -1,0 +1,502 @@
+{
+    "intersecciones": [
+      {
+        "id": 1,
+        "nombre": "Interseccion Central",
+        "no_Calles_totales": 4
+      }
+    ],
+    "calles": [
+      {
+        "id": 1,
+        "interseccion_id": 1,
+        "nombre": "Calle A",
+        "largo": 500.00,
+        "no_carriles": 2,
+        "cardinalidad": 1
+      },
+      {
+        "id": 2,
+        "interseccion_id": 1,
+        "nombre": "Calle B",
+        "largo": 600.00,
+        "no_carriles": 2,
+        "cardinalidad": 2
+      },
+      {
+        "id": 3,
+        "interseccion_id": 1,
+        "nombre": "Calle C",
+        "largo": 450.00,
+        "no_carriles": 2,
+        "cardinalidad": 3
+      },
+      {
+        "id": 4,
+        "interseccion_id": 1,
+        "nombre": "Calle D",
+        "largo": 700.00,
+        "no_carriles": 2,
+        "cardinalidad": 4
+      }
+    ],
+    "tipo_vehiculos": [
+      {
+        "id": 1,
+        "descripcion": "Automovil"
+      },
+      {
+        "id": 2,
+        "descripcion": "Motocicleta"
+      },
+      {
+        "id": 3,
+        "descripcion": "Camion"
+      },
+      {
+        "id": 4,
+        "descripcion": "Trailer"
+      }
+    ],
+    "vias": [
+      {
+        "id": 1,
+        "calle_id": 1,
+        "no_carriles": 1,
+        "direccion": [
+          2,
+          3,
+          4
+        ],
+        "tipo_vehiculo_id": 1
+      },
+      {
+        "id": 2,
+        "calle_id": 2,
+        "no_carriles": 1,
+        "direccion": [
+          1,
+          3,
+          4
+        ],
+        "tipo_vehiculo_id": 1
+      },
+      {
+        "id": 3,
+        "calle_id": 3,
+        "no_carriles": 1,
+        "direccion": [
+          1,
+          2,
+          4
+        ],
+        "tipo_vehiculo_id": 2
+      },
+      {
+        "id": 4,
+        "calle_id": 4,
+        "no_carriles": 1,
+        "direccion": [
+          1,
+          3,
+          2
+        ],
+        "tipo_vehiculo_id": 3
+      }
+    ],
+    "condiciones_carriles": [
+      {
+        "id": 1,
+        "descripcion": "Buen estado"
+      },
+      {
+        "id": 2,
+        "descripcion": "En reparación"
+      }
+    ],
+    "semaforos": [
+      {
+        "id": 1,
+        "via_id": 1,
+        "tiempo_rojo": 20,
+        "tiempo_amarillo": 20,
+        "tiempo_verde": 20,
+        "tiempo_total": 60
+      },
+      {
+        "id": 2,
+        "via_id": 2,
+        "tiempo_rojo": 25,
+        "tiempo_amarillo": 10,
+        "tiempo_verde": 25,
+        "tiempo_total": 60
+      },
+      {
+        "id": 3,
+        "via_id": 3,
+        "tiempo_rojo": 20,
+        "tiempo_amarillo": 10,
+        "tiempo_verde": 20,
+        "tiempo_total": 50
+      },
+      {
+        "id": 4,
+        "via_id": 4,
+        "tiempo_rojo": 30,
+        "tiempo_amarillo": 10,
+        "tiempo_verde": 30,
+        "tiempo_total": 70
+      }
+    ],
+    "carriles": [
+      {
+        "id": 1,
+        "via_id": 1,
+        "anchor": 1,
+        "señalizado": true,
+        "condiciones_id": 1
+      },
+      {
+        "id": 2,
+        "via_id": 2,
+        "anchor": 2,
+        "señalizado": true,
+        "condiciones_id": 1
+      }
+    ],
+    "sensores_trafico": [
+      {
+        "id": 1,
+        "carril_id": 1,
+        "distancia": 100.00,
+        "tiempo": 5.00,
+        "velocidad": 20.00,
+        "tipo_vehiculo_id": 1
+      },
+      {
+        "id": 2,
+        "carril_id": 2,
+        "distancia": 150.00
+      }
+    ]
+  }
+  
+
+"sensores_trafico": [
+    {
+      "id": 1,
+      "carril_id": 1,
+      "distancia": 100.00,
+      "tiempo": 5.00,
+      "velocidad": 20.00,
+      "tipo_vehiculo_id": 1
+    },
+    {
+      "id": 2,
+      "carril_id": 2,
+      "distancia": 150.00
+    }
+  ],
+  "tipo_conductores": [
+    {
+      "id": 1,
+      "nombre": "Particular"
+    },
+    {
+      "id": 2,
+      "nombre": "Taxi"
+    },
+    {
+      "id": 3,
+      "nombre": "Transporte de carga"
+    },
+    {
+      "id": 4,
+      "nombre": "Transporte público"
+    },
+    {
+      "id": 5,
+      "nombre": "Conductor de reparto"
+    }
+  ],
+  "generos": [
+    {
+      "id": 1,
+      "nombre": "Masculino"
+    },
+    {
+      "id": 2,
+      "nombre": "Femenino"
+    },
+    {
+      "id": 3,
+      "nombre": "No binario"
+    }
+  ],
+  "tipo_vehiculos": [
+    {
+      "id": 1,
+      "tipo": "Automóvil"
+    },
+    {
+      "id": 2,
+      "tipo": "Motocicleta"
+    },
+    {
+      "id": 3,
+      "tipo": "Camión"
+    },
+    {
+      "id": 4,
+      "tipo": "Autobús"
+    },
+    {
+      "id": 5,
+      "tipo": "Furgoneta"
+    }
+  ],
+  "vehiculos": [
+    {
+      "id": 1,
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "tipo_vehiculo": 1
+    },
+    {
+      "id": 2,
+      "marca": "Honda",
+      "modelo": "Civic",
+      "tipo_vehiculo": 1
+    },
+    {
+      "id": 3,
+      "marca": "Ford",
+      "modelo": "F-150",
+      "tipo_vehiculo": 3
+    },
+    {
+      "id": 4,
+      "marca": "Mercedes-Benz",
+      "modelo": "C-Class",
+      "tipo_vehiculo": 1
+    },
+    {
+      "id": 5,
+      "marca": "BMW",
+      "modelo": "3 Series",
+      "tipo_vehiculo": 1
+    },
+    {
+      "id": 6,
+      "marca": "Chevrolet",
+      "modelo": "Silverado",
+      "tipo_vehiculo": 3
+    },
+    {
+      "id": 7,
+      "marca": "Nissan",
+      "modelo": "Sentra",
+      "tipo_vehiculo": 1
+    },
+    {
+      "id": 8,
+      "marca": "Hyundai",
+      "modelo": "Elantra",
+      "tipo_vehiculo": 1
+    },
+    {
+      "id": 9,
+      "marca": "Kia",
+      "modelo": "Sorento",
+      "tipo_vehiculo": 1
+    },
+    {
+      "id": 10,
+      "marca": "Volkswagen",
+      "modelo": "Golf",
+      "tipo_vehiculo": 1
+    },
+    {
+      "id": 11,
+      "marca": "Audi",
+      "modelo": "A4",
+      "tipo_vehiculo": 1
+    },
+    {
+      "id": 12,
+      "marca": "Jeep",
+      "modelo": "Wrangler",
+      "tipo_vehiculo": 1
+    },
+    {
+      "id": 13,
+      "marca": "Subaru",
+      "modelo": "Impreza",
+      "tipo_vehiculo": 1
+    },
+    {
+      "id": 14,
+      "marca": "Mazda",
+      "modelo": "3",
+      "tipo_vehiculo": 1
+    },
+    {
+      "id": 15,
+      "marca": "Tesla",
+      "modelo": "Model 3",
+      "tipo_vehiculo": 1
+    },
+    {
+      "id": 16,
+      "marca": "Volvo",
+      "modelo": "XC90",
+      "tipo_vehiculo": 1
+    },
+    {
+      "id": 17,
+      "marca": "Freightliner",
+      "modelo": "Cascadia",
+      "tipo_vehiculo": 3
+    },
+    {
+      "id": 18,
+      "marca": "Peterbilt",
+      "modelo": "389",
+      "tipo_vehiculo": 3
+    },
+    {
+      "id": 19,
+      "marca": "Kenworth",
+      "modelo": "W900",
+      "tipo_vehiculo": 3
+    },
+    {
+      "id": 20,
+      "marca": "Mack",
+      "modelo": "Anthem",
+      "tipo_vehiculo": 3
+    }
+  ],
+  "tipo_autos": [
+    {
+      "id": 1,
+      "vehiculo_id": 1,
+      "tipo_conductor_id": 1,
+      "genero_id": 1
+    },
+    {
+      "id": 2,
+      "vehiculo_id": 2,
+      "tipo_conductor_id": 1,
+      "genero_id": 2
+    },
+    {
+      "id": 3,
+      "vehiculo_id": 3,
+      "tipo_conductor_id": 3,
+      "genero_id": 1
+    },
+    {
+      "id": 4,
+      "vehiculo_id": 4,
+      "tipo_conductor_id": 1,
+      "genero_id": 2
+    },
+    {
+      "id": 5,
+      "vehiculo_id": 5,
+      "tipo_conductor_id": 1,
+      "genero_id": 1
+    },
+    {
+      "id": 6,
+      "vehiculo_id": 6,
+      "tipo_conductor_id": 3,
+      "genero_id": 2
+    },
+    {
+      "id": 7,
+      "vehiculo_id": 7,
+      "tipo_conductor_id": 1,
+      "genero_id": 1
+    },
+    {
+      "id": 8,
+      "vehiculo_id": 8,
+      "tipo_conductor_id": 1,
+      "genero_id": 2
+    },
+    {
+      "id": 9,
+      "vehiculo_id": 9,
+      "tipo_conductor_id": 1,
+      "genero_id": 1
+    },
+    {
+      "id": 10,
+      "vehiculo_id": 10,
+      "tipo_conductor_id": 1,
+      "genero_id": 2
+    },
+    {
+      "id": 11,
+      "vehiculo_id": 11,
+      "tipo_conductor_id": 1,
+      "genero_id": 1
+    },
+    {
+      "id": 12,
+      "vehiculo_id": 12,
+      "tipo_conductor_id": 1,
+      "genero_id": 2
+    },
+    {
+      "id": 13,
+      "vehiculo_id": 13,
+      "tipo_conductor_id": 1,
+      "genero_id": 1
+    },
+    {
+      "id": 14,
+      "vehiculo_id": 14,
+      "tipo_conductor_id": 1,
+      "genero_id": 2
+    },
+    {
+      "id": 15,
+      "vehiculo_id": 15,
+      "tipo_conductor_id": 1,
+      "genero_id": 1
+    },
+    {
+      "id": 16,
+      "vehiculo_id": 16,
+      "tipo_conductor_id": 1,
+      "genero_id": 2
+    },
+    {
+      "id": 17,
+      "vehiculo_id": 17,
+      "tipo_conductor_id": 3,
+      "genero_id": 1
+    },
+    {
+      "id": 18,
+      "vehiculo_id": 18,
+      "tipo_conductor_id": 3,
+      "genero_id": 2
+    },
+    {
+      "id": 19,
+      "vehiculo_id": 19,
+      "tipo_conductor_id": 3,
+      "genero_id": 1
+    },
+    {
+      "id": 20,
+      "vehiculo_id": 20,
+      "tipo_conductor_id": 3,
+      "genero_id": 2
+    }
+  ]
+}
