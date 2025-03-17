@@ -6,7 +6,7 @@
         <flux:navlist variant="outline">
                     <flux:navlist.group  class=" grid auto-rows-min gap-4 md:grid-cols-4 ">
                          <flux:navlist.item icon="cloud-upload" :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Importar trafico') }}</flux:navlist.item>
-                         <button class="hover: bg-green-600 text-white rounded"  wire:click="generarDatos">Generar datos</button>
+                         <button class=" text-white rounded"  wire:click="generarDatos">Generar datos</button>
                     </flux:navlist.group>
             </flux:navlist>
             <livewire:map>
