@@ -13,19 +13,16 @@ return new class extends Migration
     {
        
     Schema::create('tipo_conductores', function (Blueprint $table) {
-        $table->id()->primary();;
         $table->string('nombre');
         $table->timestamps();
     });
 
 Schema::create('tipo_vehiculos', function (Blueprint $table) {
-        $table->id()->primary();
         $table->string('tipo_vehiculo');
         $table->timestamps();
     });
  
     Schema::create('vehiculos', function (Blueprint $table) {
-        $table->id()->primary();
         $table->string('marca');
         $table->string('modelo');
         $table->date('fecha');
@@ -36,7 +33,6 @@ Schema::create('tipo_vehiculos', function (Blueprint $table) {
     });
 
 Schema::create('tipo_autos', function (Blueprint $table) {
-        $table->id();
         $table->enum('gender', ['male', 'female', 'other'])->nullable(); 
         $table->timestamps();
         //llaves foraneas
@@ -52,14 +48,12 @@ Schema::create('tipo_autos', function (Blueprint $table) {
     
   // Crear tabla 'intersecciones'
   Schema::create('intersecciones', function (Blueprint $table) {
-    $table->id(); 
     $table->string('nombre');
     $table->timestamps();
 });
 
 // Crear tabla 'calles'
-Schema::create('calles', function (Blueprint $table) {
-    $table->id(); 
+Schema::create('calles', function (Blueprint $table) {git
     $table->string('nombre');
     $table->decimal('largo', 10, 2);
     $table->timestamps();

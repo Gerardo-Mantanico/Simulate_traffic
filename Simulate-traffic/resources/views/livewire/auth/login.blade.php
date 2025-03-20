@@ -37,12 +37,29 @@ new #[Layout('components.layouts.auth')] class extends Component {
             ]);
         }
 
+        $user = Auth::user();
+        $rol = $user->rol;
         RateLimiter::clear($this->throttleKey());
         Session::regenerate();
+        switch($rol) {
+            case 1:
+                $this->redirect(route('admin'), navigate: true);
+                break;
+            case 2:
+                $this->redirectIntended(default: route('monitor', absolute: false), navigate: true);
+                break;
+            case 3:
+                $this->redirectIntended(default: route('supervisor', absolute: false), navigate: true);
+                break;
+            default:
+            $this->redirectIntended(default: route('home', absolute: false), navigate: true);
+                
+        
+        }
 
-        $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
+
     }
-
+//dmin/dashborad
     /**
      * Ensure the authentication request is not rate limited.
      */

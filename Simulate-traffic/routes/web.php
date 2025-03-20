@@ -6,23 +6,36 @@ use App\Http\Controllers\SupervisorController;
 use App\Http\Controllers\MonitorController;
 use Livewire\Volt\Volt;
 
-
-Route::get('/semaforo', App\Livewire\SemaforoTable::class)->name('semaforo');
-Route::get('/semaforo/add', App\Livewire\SemaforoForm::class);
-
-Route::get('/userRegister', App\Livewire\UserTable::class)->name('userRegister');
-
-Route::get('/user/add', App\Livewire\RegisterUser::class)->name('userAdd');
-
 Route::get('/resumentrafico', function () {
     return view('report.report');
 })->name('resumentrafico');
 
+//administrador
+Route::get('/admin', function () {
+    return view('administrador-dashboard');
+})->name('admin'); 
+Route::get('/semaforo', App\Livewire\SemaforoTable::class)->name('semaforo');
+Route::get('/semaforo/add', App\Livewire\SemaforoForm::class);
+Route::get('/userRegister', App\Livewire\UserTable::class)->name('userRegister');
+Route::get('/user/add', App\Livewire\RegisterUser::class)->name('userAdd');
+Route::get('/calle/add', App\Livewire\Calleform::class);
+Route::get('/calle', App\Livewire\CalleTable::class)->name('calle');
+Route::get('/avenida/add', App\Livewire\AvenidaForm::class);
+Route::get('/avenida', App\Livewire\AvenidaTable::class)->name('avenida');
 
-/*
-Route::get('/semaforo', function () {
-    return view('livewire.semaforo-table');
-});*/
+
+//moitoreador
+Route::get('/monitor', function () {
+    return view('monitor-dashboard');
+})->name('monitor');
+
+
+ //route of supervisor
+ Route::get('/supervisor', function () {
+    return view('supervisor-dashboard');
+})->name('supervisor');
+
+
 
 
 Route::get('/', function () {

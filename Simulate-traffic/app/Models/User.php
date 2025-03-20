@@ -30,7 +30,8 @@ class User extends Authenticatable
         'phone_number',  // Número de teléfono
         'profile_picture', // Foto de perfil
         'birthdate',     // Fecha de nacimiento
-        'gender',        // Género
+        'gender',       //gender
+        'rol'        // rol
     ];
 
     /**

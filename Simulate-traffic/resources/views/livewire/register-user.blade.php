@@ -124,6 +124,18 @@
                 <option value="other">{{ __('Other') }}</option>
             </select>
         </div>
+         <!-- rol-->
+         <div>
+            <label for="rol" class="block text-sm font-medium text-white">
+                {{ __('Gender') }}
+            </label>
+            <select wire:model="rol" id="rol" class="mt-1 block w-full text-sm text-white rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                <option value="">{{ __('Select Gender') }}</option>
+                <option value="1">{{ __('Administrador') }}</option>
+                <option value="2">{{ __('Monitoreador') }}</option>
+                <option value="3">{{ __('Supervisor') }}</option>
+            </select>
+        </div>
         </div>
         <div class="flex items-center justify-end">
             <flux:button type="submit" variant="primary" class="w-full bg-green-600 " >

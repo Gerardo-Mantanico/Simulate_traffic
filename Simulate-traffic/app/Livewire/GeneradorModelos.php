@@ -117,7 +117,7 @@ class GeneradorModelos extends Component
     public function render()
     {
        // $this->data();
-        return view('livewire.generador-modelos');
+        return view('livewire.generador-modelos')->layout('components.layouts.monitor', ['title' => 'Monitor']);
         // Pasar los datos al archivo Blade
        /* return view('livewire.generador-modelos', [
             'semaforos' => $this->semaforos,

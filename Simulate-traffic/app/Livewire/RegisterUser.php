@@ -19,7 +19,7 @@ class RegisterUser extends Component
     public ?string $profile_picture = null;  // Foto de perfil
     public ?string $birthdate = null;  // Fecha de nacimiento (nullable)
     public ?string $gender = null;     // Género (nullable: male, female, other)
-    public ?string $rol = null;        // Asegúrate de definir la propiedad 'rol'
+    public string $rol = '';        // Asegúrate de definir la propiedad 'rol'
 
     // Regla de validación para el formulario
     protected $rules = [
@@ -33,6 +33,7 @@ class RegisterUser extends Component
         'profile_picture' => ['nullable', 'string', 'max:255'],  // Foto de perfil (opcional)
         'birthdate' => ['nullable', 'date'],  // Fecha de nacimiento (opcional)
         'gender' => ['nullable', 'in:male,female,other'],  // Género (opcional, solo estos valores permitidos)        
+        'rol' =>['nullable','integer'],
     ];
 
     // Método para manejar el envío del formulario
@@ -64,6 +65,6 @@ class RegisterUser extends Component
 
     public function render()
     {
-        return view('livewire.register-user');
+        return view('livewire.register-user')->layout('components.layouts.admin', ['title' => 'administrador']);
     }
 }

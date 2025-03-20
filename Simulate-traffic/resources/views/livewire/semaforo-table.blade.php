@@ -1,3 +1,6 @@
+
+
+<div>
 <div class="dark:bg-zinc-50">
 <div class="relative h-15">
     <!-- Otros elementos dentro del contenedor -->
@@ -21,8 +24,8 @@
     :data="$data"
     :action-buttons="[
         ['label' => 'Eliminar', 'action' => 'deleteUser'],
-        ['label' => 'Editar', 'action' => 'editUser']
     ]"
     :nameTable="'SEMAFOROS'"
 />   
+</div>
 </div>

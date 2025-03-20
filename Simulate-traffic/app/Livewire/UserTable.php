@@ -23,6 +23,6 @@ class UserTable extends Component
 
         return view('livewire.user-table', [
             'data' => $this->data, // Pasamos solo los datos de la página actual
-        ]);
+        ])->layout('components.layouts.admin', ['title' => 'administrador']);
     }
 }

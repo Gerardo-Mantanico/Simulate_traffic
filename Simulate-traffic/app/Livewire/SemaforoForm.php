@@ -52,6 +52,6 @@ class SemaforoForm extends Component
 
     public function render()
     {
-        return view('livewire.semaforo-form');
+        return view('livewire.semaforo-form')->layout('components.layouts.admin', ['title' => 'administrador']);
     }
 }
