@@ -28,6 +28,8 @@ Route::get('/avenida', App\Livewire\AvenidaTable::class)->name('avenida');
 Route::get('/monitor', function () {
     return view('dashboard');
 })->name('monitor');
+Route::get('/iteracion', App\Livewire\IteracionTable::class)->name('iteracion');
+Route::get('/file-up', App\Livewire\FileUpload::class)->name('file-up');
 
 
  //route of supervisor

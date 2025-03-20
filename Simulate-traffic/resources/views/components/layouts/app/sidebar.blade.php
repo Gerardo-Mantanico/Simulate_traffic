@@ -13,30 +13,10 @@
             </a>
 
             <flux:navlist variant="outline">
-                <flux:navlist.group :heading="__('Area de monitoreo')" class="grid ">
-                <flux:navlist.group :heading="__('Tiempo')" class="grid ">
+                <flux:navlist.group :heading="__('config')" class="grid ">
                     <flux:navlist.item  :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('simulador') }}</flux:navlist.item>
-                    <flux:navlist.item  :href="route('userRegister')" :current="request()->routeIs('userRegister')" wire:navigate>{{ __('Gestion usuarios') }}</flux:navlist.item>
-                    <flux:navlist.item  :href="route('semaforo')" :current="request()->routeIs('semaforo')" wire:navigate>{{ __('Semaforo') }}</flux:navlist.item>
                     <flux:navlist.item  :href="route('resumentrafico')" :current="request()->routeIs('resumentrafico')" wire:navigate>{{ __('Resumen trafico') }}</flux:navlist.item>
-
-                    <flux:navlist.item  :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Calles') }}</flux:navlist.item>
-                    
-                    
-
-                  
-                    <flux:navlist.item  :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Graficos') }}</flux:navlist.item>
-    
-                    <flux:navlist.item  :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Archivos') }}</flux:navlist.item>
-                    <flux:navlist.item  :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Reportes de iteraciones') }}</flux:navlist.item>
-                    <flux:navlist.item  :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Informacion especial') }}</flux:navlist.item>
-    
-                    <flux:navlist.item  :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Reportes e informes') }}</flux:navlist.item>
-                    <flux:navlist.item  :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Agregar Calles y avenidas') }}</flux:navlist.item>
-                    <flux:navlist.item  :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Historico') }}</flux:navlist.item>
-                    <flux:navlist.item  :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Reporte de usuarios') }}</flux:navlist.item>
-    
-        
+                    <flux:navlist.item  :href="route('iteracion')" :current="request()->routeIs('iteracion')" wire:navigate>{{ __('Historial de iteracion') }}</flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
 
