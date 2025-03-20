@@ -14,10 +14,8 @@
 
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('Area de monitor')" class="grid ">
-                    <flux:navlist.item  :href="route('userRegister')" :current="request()->routeIs('userRegister')" wire:navigate>{{ __('Simulacion') }}</flux:navlist.item>
-                    <flux:navlist.item  :href="route('semaforo')" :current="request()->routeIs('semaforo')" wire:navigate>{{ __('iteraciones') }}</flux:navlist.item>
-                    <flux:navlist.item  :href="route('calle')" :current="request()->routeIs('calle')" wire:navigate>{{ __('Historial del semaforo') }}</flux:navlist.item>                   
-                </flux:navlist.group>
+                    <flux:navlist.item  :href="route('file')" :current="request()->routeIs('file')" wire:navigate>{{ __('Simulacion') }}</flux:navlist.item>
+                  </flux:navlist.group>
             </flux:navlist>
 
             <flux:spacer />

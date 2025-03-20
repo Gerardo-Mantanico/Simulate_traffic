@@ -13,7 +13,8 @@
             </a>
 
             <flux:navlist variant="outline">
-                <flux:navlist.group :heading="__('config')" class="grid ">
+                <flux:navlist.group :heading="__('Area de monitoreo')" class="grid ">
+                <flux:navlist.group :heading="__('Tiempo')" class="grid ">
                     <flux:navlist.item  :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('simulador') }}</flux:navlist.item>
                     <flux:navlist.item  :href="route('userRegister')" :current="request()->routeIs('userRegister')" wire:navigate>{{ __('Gestion usuarios') }}</flux:navlist.item>
                     <flux:navlist.item  :href="route('semaforo')" :current="request()->routeIs('semaforo')" wire:navigate>{{ __('Semaforo') }}</flux:navlist.item>

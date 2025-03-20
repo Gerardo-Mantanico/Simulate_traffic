@@ -58,13 +58,27 @@ class RegisterUser extends Component
         ]);
 
         session()->flash('message', 'Usuario registrado con éxito.');
-
-        // Opcional: Redirigir después de registrar
-        // return redirect()->route('login');
+        $this->resetForm();
     }
 
     public function render()
     {
         return view('livewire.register-user')->layout('components.layouts.admin', ['title' => 'administrador']);
     }
+
+    public function resetForm(){
+        $this->name = '';
+        $this->email = '';
+        $this->password = '';
+        $this->password_confirmation = '';
+        $this->last_name = '';
+        $this->dpi = '';
+        $this->address = '';
+        $this->phone_number = '';
+        $this->profile_picture = '';
+        $this->birthdate = '';
+        $this->gender = '';
+        $this->rol = '';
+}
+
 }

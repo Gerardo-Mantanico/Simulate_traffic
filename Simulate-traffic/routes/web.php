@@ -26,7 +26,7 @@ Route::get('/avenida', App\Livewire\AvenidaTable::class)->name('avenida');
 
 //moitoreador
 Route::get('/monitor', function () {
-    return view('monitor-dashboard');
+    return view('dashboard');
 })->name('monitor');
 
 
