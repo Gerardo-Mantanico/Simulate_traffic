@@ -1,0 +1,222 @@
+{
+  "interseccion": {
+    "id": 1,
+    "nombre": "Intersección Generada"
+  },
+  "calles": [
+    {
+      "id": 1,
+      "interseccion_id": 1,
+      "nombre": "Calle 1",
+      "largo": 150,
+      "cardinalidad_id": 1
+    },
+    {
+      "id": 2,
+      "interseccion_id": 1,
+      "nombre": "Calle 2",
+      "largo": 180,
+      "cardinalidad_id": 2
+    },
+    {
+      "id": 3,
+      "interseccion_id": 1,
+      "nombre": "Calle 3",
+      "largo": 120,
+      "cardinalidad_id": 3
+    },
+    {
+      "id": 4,
+      "interseccion_id": 1,
+      "nombre": "Calle 4",
+      "largo": 160,
+      "cardinalidad_id": 4
+    }
+  ],
+  "semaforos": [
+    {
+      "id": 1,
+      "nombre": 1,
+      "tiempo_color_rojo": 35,
+      "tiempo_color_amarillo": 10,
+      "tiempo_color_verde": 15,
+      "tiempo_total": 60
+    },
+    {
+      "id": 2,
+      "nombre": 2,
+      "tiempo_color_rojo": 25,
+      "tiempo_color_amarillo": 20,
+      "tiempo_color_verde": 15,
+      "tiempo_total": 60
+    },
+    {
+      "id": 3,
+      "nombre": 3,
+      "tiempo_color_rojo": 40,
+      "tiempo_color_amarillo": 5,
+      "tiempo_color_verde": 15,
+      "tiempo_total": 60
+    },
+    {
+      "id": 4,
+      "nombre": 4,
+      "tiempo_color_rojo": 30,
+      "tiempo_color_amarillo": 15,
+      "tiempo_color_verde": 15,
+      "tiempo_total": 60
+    }
+  ],
+  "vias": [
+    {
+      "id": 1,
+      "calle_id": 1,
+      "no_carriles": 1,
+      "direccion": 1,
+      "semaforo_id": 1
+    },
+    {
+      "id": 2,
+      "calle_id": 2,
+      "no_carriles": 1,
+      "direccion": 2,
+      "semaforo_id": 2
+    },
+    {
+      "id": 3,
+      "calle_id": 3,
+      "no_carriles": 1,
+      "direccion": 3,
+      "semaforo_id": 3
+    },
+    {
+      "id": 4,
+      "calle_id": 4,
+      "no_carriles": 1,
+      "direccion": 4,
+      "semaforo_id": 4
+    }
+  ],
+  "carriles": [
+    {
+      "id": 1,
+      "via_id": 1,
+      "ancho": 8,
+      "señalizado": false,
+      "condiciones_id": 3
+    },
+    {
+      "id": 2,
+      "via_id": 2,
+      "ancho": 9,
+      "señalizado": false,
+      "condiciones_id": 1
+    },
+    {
+      "id": 3,
+      "via_id": 3,
+      "ancho": 7,
+      "señalizado": false,
+      "condiciones_id": 4
+    },
+    {
+      "id": 4,
+      "via_id": 4,
+      "ancho": 6,
+      "señalizado": false,
+      "condiciones_id": 2
+    }
+  ],
+  "registroTrafico": [
+    {
+      "id": 1,
+      "carril_id": 1,
+      "distancia": 50,
+      "tiempo_reaccion": 3,
+      "tiempo": 10,
+      "velocidad": 28,
+      "tipo_auto_id": 1
+    },
+    {
+      "id": 2,
+      "carril_id": 1,
+      "distancia": 120,
+      "tiempo_reaccion": 2,
+      "tiempo": 15,
+      "velocidad": 30,
+      "tipo_auto_id": 2
+    },
+    {
+      "id": 3,
+      "carril_id": 1,
+      "distancia": 180,
+      "tiempo_reaccion": 1,
+      "tiempo": 20,
+      "velocidad": 29,
+      "tipo_auto_id": 3
+    },
+    {
+      "id": 4,
+      "carril_id": 2,
+      "distancia": 90,
+      "tiempo_reaccion": 4,
+      "tiempo": 18,
+      "velocidad": 27,
+      "tipo_auto_id": 4
+    },
+    {
+      "id": 5,
+      "carril_id": 2,
+      "distancia": 160,
+      "tiempo_reaccion": 2,
+      "tiempo": 22,
+      "velocidad": 26,
+      "tipo_auto_id": 5
+    },
+    {
+      "id": 6,
+      "carril_id": 3,
+      "distancia": 100,
+      "tiempo_reaccion": 3,
+      "tiempo": 12,
+      "velocidad": 25,
+      "tipo_auto_id": 6
+    },
+    {
+      "id": 7,
+      "carril_id": 3,
+      "distancia": 140,
+      "tiempo_reaccion": 1,
+      "tiempo": 14,
+      "velocidad": 27,
+      "tipo_auto_id": 7
+    },
+    {
+      "id": 8,
+      "carril_id": 3,
+      "distancia": 170,
+      "tiempo_reaccion": 2,
+      "tiempo": 20,
+      "velocidad": 28,
+      "tipo_auto_id": 8
+    },
+    {
+      "id": 9,
+      "carril_id": 4,
+      "distancia": 60,
+      "tiempo_reaccion": 3,
+      "tiempo": 10,
+      "velocidad": 25,
+      "tipo_auto_id": 9
+    },
+    {
+      "id": 10,
+      "carril_id": 4,
+      "distancia": 110,
+      "tiempo_reaccion": 2,
+      "tiempo": 16,
+      "velocidad": 30,
+      "tipo_auto_id": 10
+    }
+  ]
+}

@@ -5,7 +5,7 @@
     <div class="relative overflow-hidden dark:bg-zinc-50 rounded-xl text-black md:col-span-7 ">    
         <flux:navlist variant="outline">
                     <flux:navlist.group  class=" grid auto-rows-min gap-4 md:grid-cols-4 ">
-                         <flux:navlist.item icon="cloud-upload" :href="route(' file-up')" :current="request()->routeIs(' file-up')" wire:navigate>{{ __('Importar trafico') }}</flux:navlist.item>
+                         <flux:navlist.item icon="cloud-upload" :href="route('file-up')" :current="request()->routeIs('file-up')" wire:navigate>{{ __('Importar trafico') }}</flux:navlist.item>
                          <button class=" text-white rounded"  wire:click="generarDatos">Generar datos</button>
                     </flux:navlist.group>
             </flux:navlist>
